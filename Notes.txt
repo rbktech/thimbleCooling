@@ -1,0 +1,7 @@
+The distance function (defined on line 26), is a highly sensitive distance function since the leading order terms in x and y are of the order of x^8 and y^8. 
+
+The partial derivatives thus are of the order of x^7 and y^7. Once a random set of points have been generated, if the point is at a large distance from the thimble or anti-thimble, the point is kicked off even further, leading to a very random path which ultimately results in an overflow error.
+
+Reducing the step size is not useful since the above problem still persists, while slowing down the path of points closer to the curves. 
+
+Thus the algorithm is only suited for actions such as Sine-Gordon which are lower order distance functions. 
